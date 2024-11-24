@@ -1,0 +1,220 @@
+html {
+  background-color: #f5f5f5;
+  height: 100%;
+  width: 100%;
+}
+body {
+  margin: 0; 
+  padding: 0; 
+  padding-top: 48px;
+}
+.top-bar {
+  background-color: white;
+  color: black;
+  display: flex;
+  padding: 0px 0px;
+  justify-content: space-between; 
+  align-items: center; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  margin: 0; 
+}
+
+.nav-links {
+  font-size: 20px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  font-family: 'Roboto Flex';
+  gap: 100px;
+  padding-right: 58px;
+}
+.brand-name {
+   margin-right: 50px; 
+   margin-left: 15px; 
+   font-size: 35px; 
+   font-family: 'Bodoni Moda'; 
+}
+a.brand-name {
+  text-decoration: none; /* Removes underline */
+  color: inherit;        /* Inherits the color from parent element */
+}
+
+.user-icon {
+    color: black;
+    border: 2px solid black; 
+    padding: 5px;
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: right; 
+    text-decoration: none; 
+    margin-left: auto;
+    margin-right: 15px; 
+    }
+
+.menu-item {
+  position: relative;
+  text-align: center; 
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 340;
+}
+.menu-item:hover {
+  text-decoration: underline;
+}
+.menu-item a {
+  color:black;
+  text-decoration: none;
+  font-size: 22px;
+  margin-block-start: 10px;
+  margin-block-end: 6px;
+  padding-block: 10px;
+  padding: 5px 7.5px; 
+  display: block;
+  }
+.dropdown-content {
+  display: none; 
+  position: absolute; 
+  align-items: center;
+  justify-content: left;
+  background-color: white; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  z-index: 1;    
+  left: 0; 
+  width: 200px; 
+  top: 100%; 
+}
+
+.menu-item:hover .dropdown-content {
+  display: block; 
+}
+
+.dropdown-content a {
+  display: block; 
+  padding: 10px 10px; 
+  color: black; 
+  text-decoration: none; 
+  align-items: center;
+  justify-content: left;
+  text-align: left;
+  font-size: 17px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0; 
+}
+.linkto {
+  margin-top: 2%;
+  margin-left: 10%;
+  font-family: "Quicksand";
+  font-size: 15px;
+  color: black;
+
+}
+.page-head {
+  margin-left: 10%;
+  font-family: "Quicksand";
+  font-size: 25px;
+  margin-top: 15px;
+  font-weight: 400;
+}
+.no-ul {
+  text-decoration: none;
+  color: black;
+}
+.no-ul:hover {
+  text-decoration: underline;
+}
+.page-body{
+  margin-left: 10%;
+  margin-right: 10%;
+  font-family: "Quicksand";
+ 
+}
+.circle-container {
+  display: flex;
+  gap: 140px;
+  margin-top: 50px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 0;
+}
+
+.circle-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  width: 270px;
+  height: 270px;
+  border-radius: 50%;
+  background-color: #87cefa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.circle:hover {
+  transform: scale(1.2);
+  transition: transform 0.2s ease; 
+}
+
+.circle-text {
+  margin-top: 5px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.options {
+  display: none; /* Ensures options are hidden initially */
+  margin-top: 60px;
+  display: flex;
+  gap: 40px;
+  justify-content: center;
+}
+
+.small-circle-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.small-circle {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #add8e6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.small-circle img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.small-circle-text {
+  margin-top: 5px;
+  font-size: 0.9em;
+}

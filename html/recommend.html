@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/style/recommend.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Nixie+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Nixie+One&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Nixie+One&family=Quicksand:wght@300..700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+  <title>Modelle-Home</title>
+</head>
+
+<body>
+  <div class="top-bar">
+    <a href="home.html" class="brand-name"><span class="brand-name">Modelle</span></a>
+    <nav class="nav-links"> 
+      
+      <div class="menu-item">
+        <a href="exploretools.html">Explore Tools</a>
+        <div class="dropdown-content">
+          <a href="bodyshape.html">Body Shape Analysis</a>
+          <a href="colourana.html">Colour Analysis</a>
+        </div>
+      </div>
+      
+      <div class="menu-item">
+        <a href="wardrobe.html">My Wardrobe</a>
+      </div>
+
+      <div class="menu-item">
+        <a href="recommend.html">Recommended Outfits</a>
+      </div>         
+    </nav>
+    <div>
+    <a href="profile.html" class="user-icon">
+      <i class="fas fa-user"></i> 
+    </a>
+  </div>
+  </div>
+  <!--Nav bar ends-->
+  <div class="linkto">
+    <a href="home.html" class="no-ul">Home</a> / <a href="exploretools.html" class="no-ul">Recommended Outfits</a><br>
+</div>
+<div class="page-head"> 
+    Recommended Outfits
+</div>
+<!--page name ends-->
+<div class="page-body"> 
+  
+  <div class="circle-container">
+    <div class="circle-item" onclick="showOptions('topwearOptions')">
+      <div class="circle">
+        <img src="/pics/topwear.jpeg" alt="Topwear">
+      </div>
+      <div class="circle-text">Topwear</div>
+    </div>
+  
+    <div class="circle-item" onclick="showOptions('bottomwearOptions')">
+      <div class="circle">
+        <img src="/pics/bottomwear.jpeg" alt="Bottomwear">
+      </div>
+      <div class="circle-text">Bottomwear</div>
+    </div>
+  
+    <div class="circle-item" onclick="showOptions('shoesOptions')">
+      <div class="circle">
+        <img src="/pics/shoes.jpeg" alt="Shoes">
+      </div>
+      <div class="circle-text">Shoes</div>
+    </div>
+  </div>
+  
+  <div id="topwearOptions" class="options">
+    <div class="small-circle-item" onclick="getRecommendations('Tshirts')">
+      <div class="small-circle">
+        <img src="tshirts.jpg" alt="T-shirt">
+      </div>
+      <div class="small-circle-text">T-shirt</div>
+    </div>
+    
+    <div class="small-circle-item">
+      <div class="small-circle" onclick="getRecommendations('Shirts')">
+        <img src="shirts.jpg" alt="Shirt">
+      </div>
+      <div class="small-circle-text">Shirt</div>
+    </div>
+    
+    <div class="small-circle-item">
+      <div class="small-circle" onclick="getRecommendations('Jackets')">
+        <img src="jackets.jpg" alt="Jacket">
+      </div>
+      <div class="small-circle-text">Jacket</div>
+    </div>
+    <div class="small-circle-item">
+      <div class="small-circle" onclick="getRecommendations('Sweatshirts')">
+        <img src="sweatshirts.jpg" alt="Sweatshirt">
+      </div>
+      <div class="small-circle-text">Sweatshirts</div>
+    </div>
+    <div class="small-circle-item">
+      <div class="small-circle" onclick="getRecommendations('Dresses')">
+        <img src="dresses.jpg" alt="Dress">
+      </div>
+      <div class="small-circle-text">Dresses</div>
+    </div>
+  </div>
+  
+  <div id="bottomwearOptions" class="options">
+    <div class="small-circle-item">
+      <div class="small-circle" onclick="getRecommendations('Jeans')">
+        <img src="jeans.jpg" alt="Jeans">
+      </div>
+      <div class="small-circle-text">Jeans</div>
+    </div>
+    
+    <div class="small-circle-item">
+      <div class="small-circle" onclick="getRecommendations('Shorts')">
+        <img src="shorts.jpg" alt="Shorts">
+      </div>
+      <div class="small-circle-text">Shorts</div>
+    </div>
+    
+    <div class="small-circle-item">
+      <div class="small-circle" onclick="getRecommendations('Trousers')">
+        <img src="trousers.jpg" alt="Trousers">
+      </div>
+      <div class="small-circle-text">Trousers</div>
+    </div>
+    <div class="small-circle-item">
+      <div class="small-circle" onclick="getRecommendations('Skirts')">
+        <img src="skirts.jpg" alt="Skirt">
+      </div>
+      <div class="small-circle-text">Skirts</div>
+    </div>
+    <div class="small-circle-item">
+      <div class="small-circle" onclick="getRecommendations('Tracksuits')">
+        <img src="tracksuits.jpg" alt="Tracksuits">
+      </div>
+      <div class="small-circle-text">Tracksuits</div>
+    </div>
+  </div>
+  
+  <div id="shoesOptions" class="options">
+    <div class="small-circle-item">
+      <div class="small-circle" onclick="getRecommendations('Casual Shoes')">
+        <img src="casualshoes.jpg" alt="Casual Shoes">
+      </div>
+      <div class="small-circle-text">Casual Shoes</div>
+    </div>
+    
+    <div class="small-circle-item">
+      <div class="small-circle" onclick="getRecommendations('Formal Shoes')">
+        <img src="formalshoes.jpg" alt="Formal Shoes">
+      </div>
+      <div class="small-circle-text">Formal Shoes</div>
+    </div>
+    
+    <div class="small-circle-item">
+      <div class="small-circle" onclick="getRecommendations('Sandals')">
+        <img src="sandals.jpg" alt="Sandals">
+      </div>
+      <div class="small-circle-text">Sandals</div>
+    </div>
+    <div class="small-circle-item">
+      <div class="small-circle" onclick="getRecommendations('Sports Shoes')">
+        <img src="sportsshoes.jpg" alt="Sports Shoes">
+      </div>
+      <div class="small-circle-text">Sports Shoes</div>
+    </div>
+    <div class="small-circle-item">
+      <div class="small-circle" onclick="getRecommendations('Heels')">
+        <img src="heels.jpg" alt="Heels">
+      </div>
+      <div class="small-circle-text">Heels</div>
+    </div>
+  </div>
+  
+</div>
+<script src="/script/recommend.js"></script>
+</body>
+</html>

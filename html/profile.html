@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="/style/profile.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">   
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Nixie+One&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Nixie+One&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Nixie+One&family=Quicksand:wght@300..700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+  <title>Modelle-Home</title>
+</head>
+
+<body>
+    <!--Top Bar-->
+  <div class="top-bar">
+    <a href="home.html" class="brand-name"><span class="brand-name">Modelle</span></a>
+    <nav class="nav-links"> 
+      
+      <div class="menu-item">
+        <a href="exploretools.html">Explore Tools</a>
+        <div class="dropdown-content">
+          <a href="bodyshape.html">Body Shape Analysis</a>
+          <a href="colourana.html">Colour Analysis</a>
+        </div>
+      </div>
+      
+      <div class="menu-item">
+        <a href="wardrobe.html">My Wardrobe</a>
+      </div>
+
+      <div class="menu-item">
+        <a href="recommend.html">Recommended Outfits</a>
+      </div>         
+    </nav>
+    <div>
+    <a href="profile.html" class="user-icon" id="user-icon-bn">
+      <i class="fas fa-user"></i> 
+    </a>
+  </div>
+  </div>
+  <!--Top Bar Ends-->
+  <div class="linkto">
+    <a href="home.html" class="no-ul">Home</a> / <a href="profile.html" class="no-ul">Profile</a><br>
+</div>
+<div class="page-head"> 
+    Profile
+</div>
+  <div class="page-body">
+    <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .profile-container {
+            width: 60%;
+            margin: auto;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        .personal-info, .measurements, .preferences, .general-profile {
+            background-color: #f9f9f9;
+            padding: 10px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="profile-container">
+        <h1>User Profile</h1>
+        <div id="profile-info">
+            <p>Loading profile...</p>
+        </div>
+
+        <footer>
+            <p id="created-at"></p>
+        </footer>
+    </div>
+
+    <!-- <script>
+        // Replace this with actual userId you want to fetch
+        const userId = '60c72b2f9b7fdb6d3472d703'; 
+
+        // Fetch the profile data
+        fetch(`/api/profile/${userId}`)
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    document.getElementById('profile-info').innerHTML = `<p>${data.message}</p>`;
+                } else {
+                    // Display profile data
+                    const profileInfo = `
+                        <h2>Personal Information</h2>
+                        <p><strong>First Name:</strong> ${data.personalInfo.firstName}</p>
+                        <p><strong>Last Name:</strong> ${data.personalInfo.lastName}</p>
+                        <p><strong>Age:</strong> ${data.personalInfo.age}</p>
+                        <p><strong>Gender:</strong> ${data.personalInfo.gender}</p>
+                        
+                        <h2>Measurements</h2>
+                        <p><strong>Height:</strong> ${data.measurements.height} cm</p>
+                        <p><strong>Shoulder Width:</strong> ${data.measurements.shoulderWidth} cm</p>
+                        <p><strong>Waist Width:</strong> ${data.measurements.waistWidth} cm</p>
+                        <p><strong>Hip Width:</strong> ${data.measurements.hipWidth} cm</p>
+                        
+                        <h2>Preferences</h2>
+                        <p><strong>Hair Color:</strong> ${data.preferences.hairColor}</p>
+                        <p><strong>Eye Color:</strong> ${data.preferences.eyeColor}</p>
+                        <p><strong>Skin Tone:</strong> ${data.preferences.skinTone}</p>
+                        <p><strong>Color Preferences:</strong> ${data.preferences.personalColorPreference.join(', ')}</p>
+                        
+                        <h2>General Profile</h2>
+                        <p><strong>Occupation:</strong> ${data.generalProfile.occupation}</p>
+                        <p><strong>Location:</strong> ${data.generalProfile.location}</p>
+                        <p><strong>Style Preferences:</strong> ${data.generalProfile.stylePreferences.join(', ')}</p>
+                        <p><strong>Budget:</strong> ${data.generalProfile.budget}</p>
+                        <p><strong>Occasions:</strong> ${data.generalProfile.occasions.join(', ')}</p>
+                    `;
+                    document.getElementById('profile-info').innerHTML = profileInfo;
+                    document.getElementById('created-at').innerHTML = `Profile created on: ${new Date(data.createdAt).toLocaleDateString()}`;
+                }
+            })
+            .catch(error => {
+                console.error('Error fetching profile data:', error);
+                document.getElementById('profile-info').innerHTML = '<p>Error loading profile data</p>';
+            });
+    </script> -->
+  </div>
+</body>
+</html>

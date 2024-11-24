@@ -1,0 +1,232 @@
+html {
+    background-color: #f5f5f5;
+    height: 100%;
+    width: 100%;
+  }
+body {
+  margin: 0; 
+  padding: 0; 
+  padding-top: 48px;
+}
+.top-bar {
+  background-color: white;
+  color: black;
+  display: flex;
+  padding: 0px 0px;
+  justify-content: space-between; 
+  align-items: center; 
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  margin: 0; 
+}
+
+.nav-links {
+  font-size: 20px;
+  display: flex; 
+  justify-content: center; 
+  align-items: center;
+  font-family: 'Roboto Flex';
+  gap: 100px;
+  padding-right: 58px;
+}
+.brand-name {
+    margin-right: 50px; 
+    margin-left: 15px; 
+    font-size: 35px; 
+    font-family: 'Bodoni Moda'; 
+}
+a.brand-name {
+  text-decoration: none; /* Removes underline */
+  color: inherit;        /* Inherits the color from parent element */
+}
+
+.user-icon {
+    color: black;
+    border: 2px solid black; 
+    padding: 5px;
+    display: inline-flex; 
+    align-items: center; 
+    justify-content: right; 
+    text-decoration: none; 
+    margin-left: auto;
+    margin-right: 15px; 
+    }
+
+.menu-item {
+  position: relative;
+  text-align: center; 
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 340;
+}
+.menu-item:hover {
+  text-decoration: underline;
+}
+.menu-item a {
+  color:black;
+  text-decoration: none;
+  font-size: 22px;
+  margin-block-start: 10px;
+  margin-block-end: 6px;
+  padding-block: 10px;
+  padding: 5px 7.5px; 
+  display: block;
+  }
+.dropdown-content {
+  display: none; 
+  position: absolute; 
+  align-items: center;
+  justify-content: left;
+  background-color: white; 
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  z-index: 1;    
+  left: 0; 
+  width: 200px; 
+  top: 100%; 
+}
+
+.menu-item:hover .dropdown-content {
+  display: block; 
+}
+
+.dropdown-content a {
+  display: block; 
+  padding: 10px 10px; 
+  color: black; 
+  text-decoration: none; 
+  align-items: center;
+  justify-content: left;
+  text-align: left;
+  font-size: 17px;
+}
+
+.dropdown-content a:hover {
+  background-color: #f0f0f0; 
+}
+.linkto {
+  margin-top: 2%;
+  margin-left: 10%;
+  font-family: "Quicksand";
+  font-size: 15px;
+  color: black;
+
+}
+.page-head {
+  margin-left: 10%;
+  font-family: "Quicksand";
+  font-size: 25px;
+  margin-top: 15px;
+  font-weight: 400;
+}
+.no-ul {
+  text-decoration: none;
+  color: black;
+}
+.no-ul:hover {
+  text-decoration: underline;
+}
+.page-body{
+  margin-left: 10%;
+  margin-right: 10%;
+}
+/*general page ends*/
+
+
+.color-picker-bar {
+    display: flex;
+    flex-direction: row; /* Arrange in a horizontal row */
+    width: auto;
+    height: 100px; /* Adjust height to fit color options */
+    border: 1px solid #ddd;
+    overflow: hidden;
+    margin-top: 30px;
+}
+
+.color-option {
+    width: 21px; /* Adjust width to control size of each color option */
+    height: 100%; /* Make color options full height of the bar */
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.color-option:hover {
+    transform: scale(1.1);
+}
+
+.color-display {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+  width: 100%;
+  gap: 10px;
+}
+
+#hovered-color-box, #selected-color-box {
+  width: 100%;
+  height: 180px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: black;
+  text-align: center;
+  border-radius: 8px;
+  background-color: #e6e6e6;
+  font-family: "Quicksand";
+}
+
+#selected-color-display {
+  margin-top: 20px;
+  font-size: 16px;
+}
+.save-button {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically, if needed */
+  width: 100%; /* Optional: makes the container full-width */
+  margin-top: 20px; /* Optional: add spacing above if needed */ 
+}
+/* From Uiverse.io by vinodjangid07 */ 
+.Btn {
+  width: 130px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #262626;
+  border: none;
+  color: white;
+  font-weight: 600;
+  gap: 8px;
+  cursor: pointer;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.103);
+  position: relative;
+  overflow: hidden;
+  transition-duration: .3s;
+}
+
+.Btn::before {
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  content: "";
+  background-color: white;
+  border-radius: 50%;
+  left: -100%;
+  top: 0;
+  transition-duration: .3s;
+  mix-blend-mode: difference;
+}
+
+.Btn:hover::before {
+  transition-duration: .3s;
+  transform: translate(100%,-50%);
+  border-radius: 0;
+}
+
+.Btn:active {
+  transform: translate(5px,5px);
+  transition-duration: .3s;
+}
