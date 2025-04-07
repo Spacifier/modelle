@@ -56,97 +56,119 @@
 <div class="page-head"> 
     Profile
 </div>
-  <div class="page-body">
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Profile</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .profile-container {
-            width: 60%;
-            margin: auto;
-        }
-        h1, h2 {
-            color: #333;
-        }
-        .personal-info, .measurements, .preferences, .general-profile {
-            background-color: #f9f9f9;
-            padding: 10px;
-            margin-bottom: 20px;
-            border-radius: 5px;
-        }
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            font-size: 14px;
-        }
-    </style>
-</head>
-<body>
-    <div class="profile-container">
-        <h1>User Profile</h1>
-        <div id="profile-info">
-            <p>Loading profile...</p>
+
+<div class="page-body">
+  <div class="container">
+    <form id="profile-form">
+      <!-- Personal Information Section -->
+      <div class="section">
+        <h3>Personal Information</h3>
+        <div class="form-group">
+          <label for="firstName">First Name</label>
+          <input type="text" id="firstName" name="personalInfo.firstName" placeholder="John" required>
         </div>
+        <div class="form-group">
+          <label for="lastName">Last Name</label>
+          <input type="text" id="lastName" name="personalInfo.lastName" placeholder="Doe" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="email" id="email" name="personalInfo.email" placeholder="john.doe@example.com">
+        </div>
+        <div class="form-group">
+          <label for="phone">Phone</label>
+          <input type="tel" id="phone" name="personalInfo.phone" placeholder="+1234567890">
+        </div>
+        <div class="form-group">
+          <label for="age">Age</label>
+          <input type="number" id="age" name="personalInfo.age" placeholder="30">
+        </div>
+      </div>
 
-        <footer>
-            <p id="created-at"></p>
-        </footer>
-    </div>
+      <!-- Measurements Section -->
+      <div class="section">
+        <h3>Measurements</h3>
+        <div class="form-group">
+          <label for="height">Height (cm)</label>
+          <input type="number" id="height" name="measurements.height" placeholder="180">
+        </div>
+        <div class="form-group">
+          <label for="gender">Gender</label>
+          <select id="gender" name="measurements.gender">
+            <option value="">Select Gender</option>
+            <option value="men">Male</option>
+            <option value="women">Female</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="shoulderWidth">Shoulder Width (inch)</label>
+          <input type="number" id="shoulderWidth" name="measurements.shoulderWidth" placeholder="25">
+        </div>
+        <div class="form-group">
+          <label for="waistWidth">Waist Width (inch)</label>
+          <input type="number" id="waistWidth" name="measurements.waistWidth" placeholder="30">
+        </div>
+        <div class="form-group">
+          <label for="shoulderWidth">Hip Width (inch)</label>
+          <input type="number" id="hipWidth" name="measurements.hipWidth" placeholder="35">
+        </div>
+        <div class="form-group">
+          <label for="bodyType">Body Type</label>
+          <select id="bodyType" name="measurements.bodyType">
+            <option value="">Select Body Type</option>
+            <option value="Slim">Slim</option>
+            <option value="Athletic">Athletic</option>
+            <option value="Curvy">Curvy</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+      </div>
 
-    <!-- <script>
-        // Replace this with actual userId you want to fetch
-        const userId = '60c72b2f9b7fdb6d3472d703'; 
+      <!-- Style Preferences Section -->
+      <div class="section">
+        <h3>Style Preferences</h3>
+        <div class="form-group">
+          <label for="hairColor">Hair Color</label>
+          <input type="text" id="hairColor" name="preferences.hairColor" placeholder="Brown">
+        </div>
+        <div class="form-group">
+          <label for="eyeColor">Eye Color</label>
+          <input type="text" id="eyeColor" name="preferences.eyeColor" placeholder="Blue">
+        </div>
+        <div class="form-group">
+          <label for="skinTone">Skin Tone</label>
+          <select id="skinTone" name="preferences.skinTone">
+            <option value="">Select Skin Tone</option>
+            <option value="warm">Warm</option>
+            <option value="cool">Cool</option>
+            <option value="neutral">Neutral</option>
+            <option value="olive">Olive</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="stylePreferences">Favorite Styles</label>
+          <textarea id="stylePreferences" name="preferences.stylePreferences" rows="3" placeholder="e.g., Casual, Formal, Streetwear"></textarea>
+        </div>
+      </div>
 
-        // Fetch the profile data
-        fetch(`/api/profile/${userId}`)
-            .then(response => response.json())
-            .then(data => {
-                if (data.message) {
-                    document.getElementById('profile-info').innerHTML = `<p>${data.message}</p>`;
-                } else {
-                    // Display profile data
-                    const profileInfo = `
-                        <h2>Personal Information</h2>
-                        <p><strong>First Name:</strong> ${data.personalInfo.firstName}</p>
-                        <p><strong>Last Name:</strong> ${data.personalInfo.lastName}</p>
-                        <p><strong>Age:</strong> ${data.personalInfo.age}</p>
-                        <p><strong>Gender:</strong> ${data.personalInfo.gender}</p>
-                        
-                        <h2>Measurements</h2>
-                        <p><strong>Height:</strong> ${data.measurements.height} cm</p>
-                        <p><strong>Shoulder Width:</strong> ${data.measurements.shoulderWidth} cm</p>
-                        <p><strong>Waist Width:</strong> ${data.measurements.waistWidth} cm</p>
-                        <p><strong>Hip Width:</strong> ${data.measurements.hipWidth} cm</p>
-                        
-                        <h2>Preferences</h2>
-                        <p><strong>Hair Color:</strong> ${data.preferences.hairColor}</p>
-                        <p><strong>Eye Color:</strong> ${data.preferences.eyeColor}</p>
-                        <p><strong>Skin Tone:</strong> ${data.preferences.skinTone}</p>
-                        <p><strong>Color Preferences:</strong> ${data.preferences.personalColorPreference.join(', ')}</p>
-                        
-                        <h2>General Profile</h2>
-                        <p><strong>Occupation:</strong> ${data.generalProfile.occupation}</p>
-                        <p><strong>Location:</strong> ${data.generalProfile.location}</p>
-                        <p><strong>Style Preferences:</strong> ${data.generalProfile.stylePreferences.join(', ')}</p>
-                        <p><strong>Budget:</strong> ${data.generalProfile.budget}</p>
-                        <p><strong>Occasions:</strong> ${data.generalProfile.occasions.join(', ')}</p>
-                    `;
-                    document.getElementById('profile-info').innerHTML = profileInfo;
-                    document.getElementById('created-at').innerHTML = `Profile created on: ${new Date(data.createdAt).toLocaleDateString()}`;
-                }
-            })
-            .catch(error => {
-                console.error('Error fetching profile data:', error);
-                document.getElementById('profile-info').innerHTML = '<p>Error loading profile data</p>';
-            });
-    </script> -->
+      <!-- Submit Section -->
+      <div class="save-button">  
+        <button class="Btn" id="save-profile">  SAVE   </button>
+      </div>
+    </form>
   </div>
+
+  <!--To display wether data saved or not-->
+<div id="confirmation-message" class="hidden">
+  <div id="message-content">
+      <span id="message-icon">✔</span>
+      <span id="message-text"></span>
+  </div>
+  <button id="close-button">×</button>
+</div>
+
+</div>
+<script src="/script/profile.js"></script>
 </body>
 </html>

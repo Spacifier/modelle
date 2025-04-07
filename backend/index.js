@@ -5,7 +5,6 @@ const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const profileRoutes = require('./routes/profileRoutes');
 
-
 const app = express();
 
 // Connect to database
@@ -18,6 +17,7 @@ app.use(express.json());
 // Routes
 app.use('/api/auth', authRoutes);
 app.use('/api/profile', profileRoutes);
+ 
 
 // Error handling
 app.use((err, req, res, next) => {

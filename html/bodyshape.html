@@ -61,11 +61,11 @@
     <div id="gender-selection">
         <label>Select Gender:</label>
         <div class="gender-option">
-          <input type="radio" id="female" name="gender" value="female" checked>
+          <input type="radio" id="female" name="gender" value="women" checked>
           <label for="female">Female</label>
       </div>
       <div class="gender-option">
-          <input type="radio"  id="male" name="gender" value="male">
+          <input type="radio"  id="male" name="gender" value="men">
           <label for="male">Male</label>
       </div>
     </div>
@@ -91,7 +91,14 @@
 <div class="save-button" id="save-button">  
   <button class="Btn">  SAVE   </button>
 </div>
-
+<!--To display wether data saved or not-->
+  <div id="confirmation-message" class="hidden">
+    <div id="message-content">
+        <span id="message-icon">✔</span>
+        <span id="message-text"></span>
+    </div>
+    <button id="close-button">×</button>
+  </div>
 
 </div>
 <script src="/script/bodyshape.js"></script>

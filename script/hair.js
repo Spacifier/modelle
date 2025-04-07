@@ -21,18 +21,18 @@ function selectHairColor(colorName, colorHex) {
 
 
 function getUserIdFromToken(token) {
-    const base64Url = token.split('.')[1]; // Get the payload part
-    const base64 = base64Url.replace(/-/g, '+').replace(/_/g, '/');
-    const jsonPayload = decodeURIComponent(atob(base64).split('').map(function(c) {
-        return '%' + ('00' + c.charCodeAt(0).toString(16)).slice(-2);
-    }).join(''));
-
-    return JSON.parse(jsonPayload).id; // Adjust key based on your JWT structure
+    try {
+        const payload = JSON.parse(atob(token.split(".")[1]));
+        return payload.id;
+    } catch (error) {
+        console.error("Invalid token:", error);
+        return null;
+    }
 }
 
 document.getElementById("save-hair-color").addEventListener('click', async() => {
         const data = {
-         hairColor
+            "preferences.hairColor": hairColor       
         };
 
         console.log(data)
@@ -40,7 +40,7 @@ document.getElementById("save-hair-color").addEventListener('click', async() => 
         const userId = getUserIdFromToken(token);
 
         try {   
-            const response = await fetch(`http://localhost:5000/api/profile/${userId}/haircolor`, {
+            const response = await fetch(`http://localhost:5000/api/profile/${userId}/updateProfile`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -55,17 +55,59 @@ document.getElementById("save-hair-color").addEventListener('click', async() => 
             try {
                 const jsonResponse = JSON.parse(result);
                 if (response.ok) {
-                    alert("Data has been saved successfully!");
+                    showConfirmationMessage("Data has been saved successfully!");
                 } else {
-                    alert('Failed to save data: ' + jsonResponse.message);
+                    showConfirmationMessage('Failed to save data: ' + jsonResponse.message, true);
                 }
             } catch (error) {
                 console.error("Unexpected response:", result);
-                alert("An error occurred while saving data.");
+                showConfirmationMessage("An error occurred while saving data.", true);
             }
+            
         } catch (error) {
             console.log(error.message)
         }
 
         console.log("Data saved:", data);
     });
+
+
+function showConfirmationMessage(message, isError = false) {
+    const messageBox = document.getElementById('confirmation-message');
+    const messageText = document.getElementById('message-text');
+    const messageIcon = document.getElementById('message-icon');
+    const closeButton = document.getElementById('close-button');
+
+    // Set the message text and icon
+    messageText.textContent = message;
+    messageIcon.textContent = isError ? '✖' : '✔';
+
+    // Add appropriate class based on whether it's an error or success
+    if (isError) {
+        messageBox.classList.add('error');
+    } else {
+        messageBox.classList.remove('error');
+    }
+
+    // Show the message box
+    messageBox.classList.remove('hidden');
+    messageBox.classList.add('visible');
+
+    // Close the message box when the close button is clicked
+    closeButton.onclick = () => {
+        messageBox.classList.remove('visible');
+        setTimeout(() => {
+            messageBox.classList.add('hidden');
+        }, 300); // Wait for the transition to complete
+    };
+
+    // Automatically hide the message after 5 seconds
+    setTimeout(() => {
+        messageBox.classList.remove('visible');
+        setTimeout(() => {
+            messageBox.classList.add('hidden');
+        }, 300); // Wait for the transition to complete
+    }, 5000);
+}
+    
+    
