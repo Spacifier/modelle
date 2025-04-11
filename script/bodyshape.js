@@ -176,7 +176,7 @@ document.addEventListener("DOMContentLoaded", function () {
         console.log(data)
 
         try {   
-            const response = await fetch(`http://localhost:5000/api/profile/${userId}/updateProfile`, {
+            const response = await fetch(`https://modelle.onrender.com/api/profile/${userId}/updateProfile`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',

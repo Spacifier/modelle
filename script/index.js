@@ -13,7 +13,7 @@ $(document).ready(async function() {
         };
       
       try {
-        const response = await fetch('http://localhost:5000/api/auth/signup', {
+        const response = await fetch('https://modelle.onrender.com/api/auth/signup', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -51,7 +51,7 @@ $(document).ready(async function() {
     console.log(formData); 
 
     try {
-      const response = await fetch('http://localhost:5000/api/auth/login', {
+      const response = await fetch('https://modelle.onrender.com/api/auth/login', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
