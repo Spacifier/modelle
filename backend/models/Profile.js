@@ -50,6 +50,8 @@ const profileSchema = new mongoose.Schema({
     type: Date,
     default: Date.now
   }
+}, {
+  collection: 'Profile'
 });
 
 module.exports = mongoose.model('Profile', profileSchema);
