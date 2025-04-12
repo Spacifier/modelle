@@ -45,7 +45,7 @@ const profileController = {
         }
 
         // Prepare the Python command
-        const pythonScript = `python ../recommendation/recommend.py "${bodyType}" "${hairColor}" "${skinTone}" "${eyeColor}" "${gender}" "${articleType}" "${clothingType}"`;
+        const pythonScript = `python recommendation/recommend.py "${bodyType}" "${hairColor}" "${skinTone}" "${eyeColor}" "${gender}" "${articleType}" "${clothingType}"`;
 
         // Execute the Python script
         exec(pythonScript, (error, stdout, stderr) => {
