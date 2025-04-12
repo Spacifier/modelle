@@ -40,7 +40,7 @@ html {
   }
   a.brand-name {
     text-decoration: none; /* Removes underline */
-    color: inherit;        /* Inherits the color from parent element */
+    color: inherit;        
   }
   
   .user-icon {
@@ -136,10 +136,10 @@ html {
   
   .save-button {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically, if needed */
-    width: 100%; /* Optional: makes the container full-width */
-    margin-top: 20px; /* Optional: add spacing above if needed */ 
+    justify-content: center; 
+    align-items: center; 
+    width: 100%; 
+    margin-top: 20px; 
     margin-bottom: 20px;
   }
   /* From Uiverse.io by vinodjangid07 */ 
@@ -222,18 +222,16 @@ html {
 #gender-selection {
   display: flex;
   align-items: center;
-  justify-content: center; /* Centers horizontally */
-  gap: 15px; /* Adds spacing between options */
-  margin-top: 20px; /* Optional: Adjust for vertical spacing from other elements */
+  justify-content: center; 
+  gap: 15px; 
+  margin-top: 20px;
 }
-
 /* Keeps each radio button and label together */
 .gender-option {
   display: flex;
   align-items: center;
-  gap: 5px; /* Adds spacing between radio button and label */
+  gap: 5px; 
 }
-
 /* Styling for the Calculator Form */
 #body-shape-calculator {
 font-family: "Quicksand";
