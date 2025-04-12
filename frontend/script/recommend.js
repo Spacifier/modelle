@@ -171,7 +171,7 @@ function addProductToGrid(product, container) {
       ${newArrival ? '<span class="product-badge new">New</span>' : ''}
       ${discounted ? '<span class="product-badge sale">Sale</span>' : ''}
       <div class="product-actions">
-        <button class="quick-view-btn">Quick View</button>
+        <button class="quick-view-btn">Quick View</pbutton>
         <button class="add-to-bag-btn">Add to Bag</button>
       </div>
     </div>
