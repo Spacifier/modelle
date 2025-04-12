@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../style/bodyshape.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Nixie+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Nixie+One&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet"
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&family=Nixie+One&family=Quicksand:wght@300..700&family=Roboto+Flex:opsz,wght@8..144,100..1000&display=swap" rel="stylesheet">
+  <title>Modelle-Home</title>
+</head>
+
+<body>
+  <div class="top-bar">
+    <a href="home.html" class="brand-name"><span class="brand-name">Modelle</span></a>
+    <nav class="nav-links"> 
+      
+      <div class="menu-item">
+        <a href="exploretools.html">Explore Tools</a>
+        <div class="dropdown-content">
+            <a href="bodyshape.html">Body Shape Analysis</a>
+          <a href="colourana.html">Colour Analysis</a>
+        </div>
+      </div>
+      
+      <div class="menu-item">
+        <a href="wardrobe.html">My Wardrobe</a>
+      </div>
+
+      <div class="menu-item">
+        <a href="recommend.html">Recommended Outfits</a>
+      </div>         
+    </nav>
+    <div>
+    <a href="profile.html" class="user-icon">
+      <i class="fas fa-user"></i> 
+    </a>
+  </div>
+  </div>
+  <!--Nav bar ends-->
+  <div class="linkto">
+    <a href="home.html" class="no-ul">Home</a> / <a href="exploretools.html" class="no-ul">Explore Tools</a> / <a href="colourana.html" class="no-ul">Body Shape Analysis</a> <br>
+</div>
+<div class="page-head"> 
+    Body Shape Analysis
+</div>
+<!--page name ends-->
+<div class="page-body">
+<div id="body-shape-calculator">
+  <h3>Body Shape Calculator</h3>
+  <form id="calculator-form">
+    <!-- Gender Selection -->
+    <div id="gender-selection">
+        <label>Select Gender:</label>
+        <div class="gender-option">
+          <input type="radio" id="female" name="gender" value="women" checked>
+          <label for="female">Female</label>
+      </div>
+      <div class="gender-option">
+          <input type="radio"  id="male" name="gender" value="men">
+          <label for="male">Male</label>
+      </div>
+    </div>
+
+    <!-- Shared Measurement Fields -->
+    <label for="shoulder">Shoulder Measurement (inches):</label>
+    <input type="number" id="shoulder" required>
+    <label for="waist">Waist Measurement (inches):</label>
+    <input type="number" id="waist" required>
+
+    <label for="hip">Hip Measurement (inches):</label>
+    <input type="number" id="hip" required><br>
+    <button type="button" onclick="calculateBodyShape()">Calculate</button>
+  </form>
+  <p id="result">Your body shape will appear here.</p>
+  <div id="shape-info" style="display: none; padding: 15px; border: 1px solid #ccc; border-radius: 8px; background-color: #f1f1f1; margin-top: 10px;">
+    <!-- This will dynamically show the content based on the body type -->
+</div>
+</div>
+
+<div class="save-button" id="save-button">  
+  <button class="Btn">  SAVE   </button>
+</div>
+<!--To display wether data saved or not-->
+  <div id="confirmation-message" class="hidden">
+    <div id="message-content">
+        <span id="message-icon">✔</span>
+        <span id="message-text"></span>
+    </div>
+    <button id="close-button">×</button>
+  </div>
+
+</div>
+<script src="../script/bodyshape.js"></script>
+</body>
+</html>

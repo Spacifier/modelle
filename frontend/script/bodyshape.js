@@ -3,7 +3,7 @@ const bodyShapeTemplates = {
     hourglass: `
         <h4>Hourglass Body Shape</h4>
         <p>The hourglass shape has balanced shoulders and hips with a well-defined waist.</p>
-        <img src="/pics/hourglass.jpg" alt="Hourglass Shape" style="width:100px;height:auto;">
+        <img src="../pics/hourglass.jpg" alt="Hourglass Shape" style="width:100px;height:auto;">
         <ul>
             <li><strong>Tip:</strong> Wear fitted clothing to accentuate your waist.</li>
             <li><strong>Recommendation:</strong> Bodycon dresses, wrap dresses, high-waisted skirts.</li>
@@ -12,7 +12,7 @@ const bodyShapeTemplates = {
     invertedTriangle: `
         <h4>Inverted Triangle Body Shape</h4>
         <p>The inverted triangle shape has broader shoulders compared to hips.</p>
-        <img src="/pics/inverted.jpg" alt="Inverted Triangle Shape" style="width:100px;height:auto;">
+        <img src="../pics/inverted.jpg" alt="Inverted Triangle Shape" style="width:100px;height:auto;">
         <ul>
             <li><strong>Tip:</strong> Choose clothes that add volume to your hips to balance the shoulders.</li>
             <li><strong>Recommendation:</strong> A-line skirts, V-neck tops, straight-leg pants.</li>
@@ -21,7 +21,7 @@ const bodyShapeTemplates = {
     pear: `
         <h4>Pear Body Shape</h4>
         <p>The pear shape has wider hips and narrower shoulders.</p>
-        <img src="/pics/pear.jpg" alt="Pear Shape" style="width:100px;height:auto;">
+        <img src="../pics/pear.jpg" alt="Pear Shape" style="width:100px;height:auto;">
         <ul>
             <li><strong>Tip:</strong> Highlight your upper body to draw attention away from the hips.</li>
             <li><strong>Recommendation:</strong> Off-the-shoulder tops, structured jackets, flared pants.</li>
@@ -30,7 +30,7 @@ const bodyShapeTemplates = {
     apple: `
         <h4>Apple Body Shape</h4>
         <p>The apple shape has a wider waist with narrower hips and shoulders.</p>
-        <img src="/pics/apple.jpg" alt="Apple Shape" style="width:100px;height:auto;">
+        <img src="../pics/apple.jpg" alt="Apple Shape" style="width:100px;height:auto;">
         <ul>
             <li><strong>Tip:</strong> Look for clothes that create the illusion of a waist.</li>
             <li><strong>Recommendation:</strong> Empire-waist dresses, A-line silhouettes, tailored jackets.</li>
@@ -39,7 +39,7 @@ const bodyShapeTemplates = {
     rectangle: `
         <h4>Rectangle Body Shape</h4>
         <p>The rectangle shape has balanced shoulder, waist, and hip measurements.</p>
-        <img src="/pics/rectangle.jpg" alt="Rectangle Shape" style="width:100px;height:auto;">
+        <img src="../pics/rectangle.jpg" alt="Rectangle Shape" style="width:100px;height:auto;">
         <ul>
             <li><strong>Tip:</strong> Add curves by layering or belted outfits.</li>
             <li><strong>Recommendation:</strong> Belted dresses, peplum tops, high-waisted pants.</li>
@@ -49,7 +49,7 @@ const bodyShapeTemplates = {
    oval: `
    <h4>Oval Body Shape</h4>
    <p>The oval shape has a rounder waist with a broader upper torso.</p>
-   <img src="/pics/oval.jpg" alt="Oval Shape" style="width:100px;height:auto;">
+   <img src="../pics/oval.jpg" alt="Oval Shape" style="width:100px;height:auto;">
    <ul>
        <li><strong>Tip:</strong> Use vertical patterns to create the illusion of height and slimness.</li>
        <li><strong>Recommendation:</strong> Dark-colored shirts, vertical stripes, structured blazers.</li>
@@ -58,7 +58,7 @@ const bodyShapeTemplates = {
     rectangleM: `
     <h4>Rectangle Body Shape</h4>
     <p>The rectangle shape has balanced shoulder, waist, and hip measurements.</p>
-    <img src="/pics/rectangleM.jpg" alt="Rectangle Shape" style="width:100px;height:auto;">
+    <img src="../pics/rectangleM.jpg" alt="Rectangle Shape" style="width:100px;height:auto;">
     <ul>
         <li><strong>Tip:</strong> Add definition to the shoulders and upper body with layered clothing.</li>
         <li><strong>Recommendation:</strong> Tailored jackets, padded blazers, crew-neck sweaters.</li>
@@ -67,7 +67,7 @@ const bodyShapeTemplates = {
     trapezoid: `
     <h4>Trapezoid Body Shape</h4>
     <p>The trapezoid shape has wider shoulders compared to the waist and hips.</p>
-    <img src="/pics/trapezoid.jpg" alt="Trapezoid Shape" style="width:100px;height:auto;">
+    <img src="../pics/trapezoid.jpg" alt="Trapezoid Shape" style="width:100px;height:auto;">
     <ul>
         <li><strong>Tip:</strong> Highlight your athletic build with fitted clothing.</li>
         <li><strong>Recommendation:</strong> Slim-fit shirts, tapered trousers, polo shirts.</li>
@@ -76,7 +76,7 @@ const bodyShapeTemplates = {
     invertedMale: `
     <h4>Inverted Triangle Body Shape</h4>
     <p>The inverted triangle shape has broad shoulders and a narrower waist and hips.</p>
-    <img src="/pics/invertedm.jpg" alt="Inverted Triangle Shape" style="width:100px;height:auto;">
+    <img src="../pics/invertedm.jpg" alt="Inverted Triangle Shape" style="width:100px;height:auto;">
     <ul>
         <li><strong>Tip:</strong> Avoid overly tight tops; balance your look with straight or relaxed-fit pants.</li>
         <li><strong>Recommendation:</strong> V-neck shirts, straight-leg jeans, bomber jackets.</li>

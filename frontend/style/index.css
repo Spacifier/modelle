@@ -9,7 +9,7 @@ html {
     height:100% ;
     display: grid; /* Enable grid layout */
     grid-template-columns: 1fr 1fr; /* Two equal columns */
-    background-image: url('/pics/signpic.jpg');
+    background-image: url('../pics/signpic.jpg');
     background-size:cover; /* Ensure the image covers the entire viewport */
     background-position: center; /* Center the image */
     background-repeat: no-repeat; /* Prevent the image from repeating */

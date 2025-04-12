@@ -7,7 +7,7 @@ function selectEyeColor(color) {
     const irisDisplay = document.getElementById('iris-display');
     
     // Set the background image based on the color hovered
-    irisDisplay.style.backgroundImage = `url('/pics/${color}-iris.jpg')`;
+    irisDisplay.style.backgroundImage = `url('../pics/${color}-iris.jpg')`;
     
     // Make the display visible
     irisDisplay.style.display = 'block';
@@ -26,7 +26,7 @@ function getUserIdFromToken(token) {
 
 function showIris(element, color) {
     // Change the background image of the color option to the iris image
-    element.style.backgroundImage = `url('/pics/${color}-iris.jpg')`;
+    element.style.backgroundImage = `url('../pics/${color}-iris.jpg')`;
 }
 
 function hideIris(element, color) {

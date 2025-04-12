@@ -28,7 +28,7 @@ $(document).ready(async function() {
           console.log('Signup successful:', data);
           // Redirect the user to the appropriate page
         //   document.getElementById('user-icon-btn').href = '/html/profile.html';
-          window.location.href = '/html/home.html'; 
+          window.location.href = '../html/home.html'; 
         } else {
           // Handle signup error
           console.error('Signup failed:', data.message);
@@ -68,7 +68,7 @@ $(document).ready(async function() {
         // Store the token in localStorage or a cookie
         localStorage.setItem('token', data.token);
         // Redirect the user to the appropriate page
-        window.location.href = '/html/home.html';
+        window.location.href = '../html/home.html';
       } else {
         // Handle login error
         console.error('Login failed:', data.message);
