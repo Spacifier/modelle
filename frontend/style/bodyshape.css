@@ -28,7 +28,7 @@ html {
     display: flex; 
     justify-content: center; 
     align-items: center;
-    font-family: 'Roboto Flex';
+    font-family: 'Roboto Flex', 'Quicksand';
     gap: 100px;
     padding-right: 58px;
   }
@@ -108,14 +108,14 @@ html {
   .linkto {
     margin-top: 2%;
     margin-left: 10%;
-    font-family: "Quicksand";
+    font-family: 'Quicksand', 'Segoe UI';
     font-size: 15px;
     color: black;
   
   }
   .page-head {
     margin-left: 10%;
-    font-family: "Quicksand";
+    font-family: 'Quicksand', 'Segoe UI';
     font-size: 25px;
     margin-top: 15px;
     font-weight: 400;

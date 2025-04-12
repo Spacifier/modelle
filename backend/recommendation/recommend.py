@@ -5,11 +5,11 @@ import json
 # Load and preprocess the dataset
 import os
 
-file_path = os.path.join(os.path.dirname(__file__), "styles", "styles.csv")
+file_path = os.path.join(os.path.dirname(__file__), "styles.csv")
 
 data = pd.read_csv(file_path, quoting=1, on_bad_lines='skip')
 
-image_path = os.path.join(os.path.dirname(__file__), "styles", "images.csv")
+image_path = os.path.join(os.path.dirname(__file__), "images.csv")
 image_data= pd.read_csv(image_path,on_bad_lines='skip')
 
 # Convert filename column to match id format
