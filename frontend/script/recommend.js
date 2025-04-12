@@ -50,7 +50,7 @@ async function getRecommendations(articleType, isLoadMore = false) {
       page: currentPage
     };
     
-    const response = await fetch(`https://modelle.onrender.com/api/profile/${userId}/getData`, {
+    const response = await fetch(`https://modelle-backend.onrender.com/api/profile/${userId}/getData`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

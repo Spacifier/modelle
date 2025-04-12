@@ -14,7 +14,7 @@ async function loadProfile() {
     }
 
     try {
-        const response = await fetch(`https://modelle.onrender.com/api/profile/${userId}/displayProfile`, {
+        const response = await fetch(`https://modelle-backend.onrender.com/api/profile/${userId}/displayProfile`, {
             method: "GET",
             headers: {
                 "Content-Type": "application/json",
@@ -129,7 +129,7 @@ document.getElementById("save-profile").addEventListener('click', async(event) =
     };
 
     try {   
-        const response = await fetch(`https://modelle.onrender.com/api/profile/${userId}/updateProfile`, {
+        const response = await fetch(`https://modelle-backend.onrender.com/api/profile/${userId}/updateProfile`, {
             method: 'PUT',
             headers: {
                 'Content-Type': 'application/json',
